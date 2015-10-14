@@ -41,8 +41,8 @@ PRODUCT_COPY_FILES += \
 	$(LGE_ROOT)/system/vendor/firmware/wlan/prima/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	$(LGE_ROOT)/system/etc/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 	$(LGE_ROOT)/system/etc/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-	$(LGE_ROOT)/system/etc/wifi/wpa_supplicant_overlay.conf \
-	$(LGE_ROOT)/system/etc/wifi/p2p_supplicant_overlay.conf
+	$(LGE_ROOT)/system/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+	$(LGE_ROOT)/system/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
 	$(LGE_ROOT)/system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
@@ -232,10 +232,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	keystore.msm8960
-
-PRODUCT_COPY_FILES += \
-	wpa_supplicant_overlay.conf \
-	p2p_supplicant_overlay.conf
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
